@@ -1,3 +1,3 @@
-from app import top_tracks_trends
+from app import create_app
 
-app = top_tracks_trends()
+app = create_app()
