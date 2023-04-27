@@ -3,7 +3,7 @@ import pandas as pd
 from spotipy.oauth2 import SpotifyOAuth
 # Initialize Spotify API client with client_id parameter
 scope = "user-top-read user-library-read user-read-recently-played"
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope, client_id='b15266cc8a7d494db418f65e6f698ffe', client_secret='f256f78f0c16400089ab4ab25ab48f48', redirect_uri='http://localhost:8888/callback'))
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope, client_id='b15266cc8a7d494db418f65e6f698ffe', client_secret='f256f78f0c16400089ab4ab25ab48f48', redirect_uri='https://hammerhead-app-ombno.ondigitalocean.app/'))
 
 # Initialize previous top tracks list
 prev_top_tracks = []
