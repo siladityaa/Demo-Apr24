@@ -3,7 +3,7 @@ from data import *
 
 app = Flask(__name__)
 # Define a route to display the top 10 tracks trends
-@app.route('/recommendations', methods=['POST'])
+@app.route('/', methods=['GET', 'POST'])
 def top_tracks_trends():
     # Get the top tracks and their trends
     global top_tracks
