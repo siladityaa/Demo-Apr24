@@ -1,9 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from data import *
 
 app = Flask(__name__)
 # Define a route to display the top 10 tracks trends
-@app.route('/')
+@app.route('/recommendations', methods=['POST'])
 def top_tracks_trends():
     # Get the top tracks and their trends
     global top_tracks
@@ -37,7 +37,9 @@ def top_tracks_trends():
         updated_tracks.append(track)
     
     # Render the HTML template with the track data
-    return render_template('index.html', tracks=updated_tracks)
+    # return render_template('index.html', tracks=updated_tracks)
+    # Return the recommendations as JSON
+    return jsonify(updated_tracks)
     
 if __name__ == '__main__':
     app.run(debug=True)
